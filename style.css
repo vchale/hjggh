@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%; /* Ajuste para móviles */
     margin: 0 auto;
     padding: 0 20px; 
 }
@@ -37,6 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    flex-direction: row; /* Por defecto en desktop */
 }
 
 .header-left {
@@ -82,7 +83,6 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
 
 .navbar ul li {
@@ -107,7 +107,7 @@ body {
 
 .header-txt {
     margin-bottom: 45px;
-    margin-top: 100PX;
+    margin-top: 100px;
     animation: slideInUp 0.5s ease;
 }
 
@@ -175,7 +175,7 @@ body {
 }
 
 .welcome-1 {
-    background-image: url(img/LOGO\ ECHALE\ SABOR.png); 
+    background-image: url(img/LOGO_ECHALE_SABOR.png); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -308,6 +308,7 @@ td {
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
+    animation: slideInLeft 0.5s ease;
     position: relative; 
 }
 
@@ -316,9 +317,29 @@ td {
     top: 0; 
     left: 0; 
     width: 100%; 
+    height: 100%; 
     color: white; 
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.prices-2 h2 {
+    font-size: 60px;
+    line-height: 70px;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 20px;
+}
+
+.prices-2 p {
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+    line-height: 1.6;
 }
 
 .contacto {
@@ -369,7 +390,9 @@ textarea {
     text-align: center;
     padding: 100px 0;
 }
-
+footer, footer * {
+    color: #ffffff; 
+}
 .footer-txt {
     text-align: center;
     padding: 10px;
@@ -412,37 +435,54 @@ textarea {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
+        flex-direction: column; /* Para pantallas pequeñas */
+        text-align: center;
     }
 
-    .menu label {
-        display: block;
-    }
-    
-    .navbar ul {
-        display: none;
-        flex-direction: column;
+    .header-left, .header-right {
+        flex: none;
     }
 
-    .welcome, .prices {
-        flex-direction: column;
+    .header-txt h1, .header-txt span {
+        font-size: 50px;
     }
 
-    .welcome-1, .welcome-2, .prices-1, .prices-2 {
-        width: 100%;
-    }
-
-    .services-1 {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-
-@media (max-width: 991px) {
     .header-dir {
-        flex-direction: column;
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .welcome {
+        flex-direction: column; 
         align-items: center;
     }
-}
 
+    .welcome-1 {
+        width: 100%; 
+        height: 300px;
+        background-size: cover;
+    }
+
+    .welcome-2 {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .services {
+        padding: 50px 20px; 
+    }
+
+    .service-group {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .contacto-container {
+        width: 100%; 
+        max-width: 100%;
+    }
+
+    .footer-txt {
+        padding: 10px;
+    }
+}
