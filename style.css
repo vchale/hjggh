@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 100%; /* Ajuste para móviles */
+    max-width: 100%; 
     margin: 0 auto;
     padding: 0 20px; 
 }
@@ -30,6 +30,7 @@ body {
     text-align: center;
     position: relative;
     animation: fadeIn 1s ease; 
+    padding: 0 20px; 
 }
 
 .header-container {
@@ -37,7 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    flex-direction: row; /* Por defecto en desktop */
+    flex-direction: row; 
 }
 
 .header-left {
@@ -113,7 +114,7 @@ body {
 
 .header-txt h1, 
 .header-txt span {
-    font-size: 90px;
+    font-size: 100px;
     letter-spacing: 5px;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
@@ -196,7 +197,7 @@ body {
 
 .welcome-2 {
     width: 50%;
-    padding: 150px 50px;
+    padding: 150px 50px; 
     background-color: #d4c2a1; 
 }
 
@@ -216,7 +217,7 @@ p {
 }
 
 .services {
-    padding: 100px 0;
+    padding: 100px 0; 
     text-align: center;
 }
 
@@ -232,7 +233,7 @@ hr {
 }
 
 .services-txt p {
-    padding: 50px 20px;
+    padding: 50px 20px; 
 }
 
 .service-group {
@@ -343,7 +344,7 @@ td {
 }
 
 .contacto {
-    padding: 100px 0;
+    padding: 100px 0; 
     text-align: center;
 }
 
@@ -390,17 +391,17 @@ textarea {
     text-align: center;
     padding: 100px 0;
 }
+
 footer, footer * {
     color: #ffffff; 
 }
+
 .footer-txt {
     text-align: center;
     padding: 10px;
     background-color: #c19a6b; 
     color: #ffffff; 
 }
-
-
 
 @keyframes fadeIn {
     from {
@@ -435,7 +436,7 @@ footer, footer * {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; /* Para pantallas pequeñas */
+        flex-direction: column; 
         text-align: center;
     }
 
@@ -477,12 +478,24 @@ footer, footer * {
         align-items: center;
     }
 
-    .contacto-container {
-        width: 100%; 
-        max-width: 100%;
+    .prices {
+        flex-direction: column; 
     }
 
-    .footer-txt {
-        padding: 10px;
+    .prices-1, .prices-2 {
+        width: 100%; 
+        padding: 20px; 
+    }
+
+    .prices-2 {
+        height: 300px;
+        background-size: cover;
+        background-position: top; 
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .contacto {
+        padding: 50px 20px; 
     }
 }
